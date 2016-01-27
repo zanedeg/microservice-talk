@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>reveal.js – The HTML Presentation Framework</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <link rel="stylesheet" href="lib/css/reveal.css">
+        <link rel="stylesheet" href="lib/css/theme/night.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown>
+                    <script type="text/template">
+                        # Microservices
+                        #### Zane DeGraffenried
+
+                        Colorado Springs JS - Jan 27, 2016
+                    </script>
+                </section>
+                <section>
+                    <section><h2>What Are They?</h2></section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Monolith
+
+                            - Difficult to upgrade
+                            - Wide System Knowledge Required
+                            - Shared DB
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Service Oriented Architecture
+
+                            - Easier to upgrade
+                            - Lack of constraints can create **monolithic** services
+                            - Shared DB
+                        </script>
+                    </section>
+                    <section id="fragments">
+                        <p>Small Interconnected Services</p>
+                        <p class="fragment">Independent Processes</p>
+                        <p class="fragment">Private Data Store</p>
+                    </section>
+                    <section>
+                        <em>“small enough and no smaller” - <a href="http://shop.oreilly.com/product/0636920033158.do">Sam Newman</a></em>
+                    </section>
+                    <section id="fragments">
+                        <p>Multiple Servers, Multiple Containers</p>
+                        <p class="fragment">Immutable Infrastructure</p>
+                    </section>
+                    <section>
+                        Services should be consuming data from other services
+                    </section>
+                </section>
+                <section id="fragments">
+                    <h2>Consuming your Application as a whole</h2>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Unified & Intelligent Endpoints
+
+                            ```
+                            /v1/account/1/
+                            /v1/account/1/locations/
+                            /v1/account/1/location/56/
+                            /v1/account/1/location/56/fixture/42/
+                            /v1/account/1/location/56/usage/
+                            /v1/account/1/billing/
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Modular Middleware
+
+                            - Authentication
+                            - Error Handling
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Proxy Server
+
+                            - Authentication
+                            - Error Handling
+                        </script>
+                    </section>
+                </section>
+                <section>
+                    <h2>Lessons we have learned</h2>
+                    <section>
+                        <h4>Document Everything Everywhere</h4>
+                    </section>
+                    <section>
+                        <h4>Health Checks</h4>
+                    </section>
+                    <section>
+                        <h4>Infrastructure Management must be Automated</h4>
+                    </section>
+                    <section>
+                        <h4>Plan for Failure</h4>
+                    </section>
+                </section>
+                <section>
+                    <h2>Resources</h2>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Routing & Load Balancing
+                            - [HAProxy](http://haproxy.com)
+                            - [NGINX](http://nginx.org)
+                            - [Baker Street](http://bakerstreet.io)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Service Discovery
+                            - [consul](http://consul.io) - Hashicorp
+                            - [etcd](https://coreos.com/etcd/docs/latest/) - CoreOS
+                            - [zookeeper](https://zookeeper.apache.org) - Apache
+                            - [bamboo](https://github.com/QubitProducts/bamboo) - Qubit
+                            - [synapse](https://github.com/airbnb/synapse) - Airbnb
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Network Monitoring
+                            - [Riemann](http://riemann.io)
+                            - [Bosun](http://bosun.org)
+                            - [Prometheus](http://prometheus.io)
+                            - [Nagios](https://www.nagios.org)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Infrastructure Management
+                            - [Terraform](https://www.terraform.io)
+                            - [CloudFormation](https://aws.amazon.com/cloudformation/)
+                            - [Packer](https://www.packer.io)
+                            - [Chef](https://www.chef.io)
+                            - [Puppet](https://puppetlabs.com)
+                            - [Apex](https://github.com/apex/apex)
+                        </script>
+                    </section>
+                </section>
+                <section>
+                    <h2>Further Reading</h2>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Microservices
+                            - [Microservices Guide](http://martinfowler.com/microservices/) - Martin Fowler
+                            - [How big is a microservice](http://www.ben-morris.com/how-big-is-a-microservice/) - Ben Morris
+                            - [Amazon and the Lean Cloud](https://vimeo.com/29719577) - Werner Vogels
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Service Discovery/Routing
+                            - [True Zero Downtime HAProxy Reloads](http://engineeringblog.yelp.com/2015/04/true-zero-downtime-haproxy-reloads.html) - Yelp
+                            - [SmartStack: Service Discovery in the Cloud](http://nerds.airbnb.com/smartstack-service-discovery-cloud/) - Airbnb
+
+                            #### Infrastructure
+                            - [Trash Your Servers and Burn Your Code](http://chadfowler.com/blog/2013/06/23/immutable-deployments/) - Chad Fowler
+                        </script>
+                    </section>
+                </section>
+            </div>
+        </div>
+        <script src="lib/js/head.min.js"></script>
+        <script src="lib/js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                dependencies:[
+                    // Interpret Markdown in <section> elements
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+                    // Syntax highlight for <code> elements
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
