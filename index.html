@@ -2,10 +2,10 @@
     <head>
         <meta charset="utf-8">
 
-        <title>reveal.js – The HTML Presentation Framework</title>
+        <title>Microservices</title>
 
-        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="Hakim El Hattab">
+        <meta name="description" content="What Microservices are and what they look like in practice.">
+        <meta name="author" content="Zane DeGraffenried">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -57,37 +57,28 @@
                         </script>
                     </section>
                     <section id="fragments">
-                        <p>Small Interconnected Services</p>
-                        <p class="fragment">Independent Processes</p>
-                        <p class="fragment">Private Data Store</p>
+                        <h4>Small Interconnected Services</h4>
+                        <h4 class="fragment">Independent Processes</h4>
+                        <h4 class="fragment">Private Data Store</h4>
                     </section>
-                    <section>
-                        <em>“small enough and no smaller” - <a href="http://shop.oreilly.com/product/0636920033158.do">Sam Newman</a></em>
+                    <section data-background="http://ecx.images-amazon.com/images/I/91IfNcTDIPL.jpg" data-background-color="#fff" data-background-repeat="no-repeat" data-background-size="500px" data-background-alighn="left">
+                        <blockquote style="background-color:rgba(238, 238, 238, 0.9)";><div style="font-size:1.3em;color:#222;opacity:1.0">“small enough and no smaller”<br>- <a href="http://shop.oreilly.com/product/0636920033158.do">Sam Newman</a></div></blockquote>
                     </section>
-                    <section id="fragments">
-                        <p>Multiple Servers, Multiple Containers</p>
-                        <p class="fragment">Immutable Infrastructure</p>
+                    <section data-background="#333">
+                        <h2>Immutable Infrastructure</h2>
+                        <p lang="en" dir="ltr">We deployed 11,000 times in 2015.</p>&mdash; John Sheehan (@johnsheehan) <a href="https://twitter.com/johnsheehan/status/684078247873675265">January 4, 2016</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </section>
-                    <section>
-                        Services should be consuming data from other services
+                    <section data-background="#fff">
+                        <img src="http://softwareengineeringdaily.com/wp-content/uploads/2015/07/mongoDB-logo.png" style="border:none;box-shadow:none;background:none">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png" style="border:none;box-shadow:none;background:none">
+                        <img src="http://www.datavirtuality.com/blog/wp-content/uploads/2015/08/postgresql-logo-624x110.png" style="border:none;box-shadow:none;background:none">
                     </section>
                 </section>
                 <section id="fragments">
-                    <h2>Consuming your Application as a whole</h2>
+                    <h2 style="color:#555">Consuming your Application as a whole</h2>
 
-                    <section data-markdown>
-                        <script type="text/template">
-                            #### Unified & Intelligent Endpoints
-
-                            ```
-                            /v1/account/1/
-                            /v1/account/1/locations/
-                            /v1/account/1/location/56/
-                            /v1/account/1/location/56/fixture/42/
-                            /v1/account/1/location/56/usage/
-                            /v1/account/1/billing/
-                            ```
-                        </script>
+                    <section data-background="fff">
+                    <img src="https://www.haproxy.com/static/img/logo.png" style="border:none;box-shadow:none;background:none">
                     </section>
                     <section data-markdown>
                         <script type="text/template">
@@ -97,13 +88,16 @@
                             - Error Handling
                         </script>
                     </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            #### Proxy Server
+                    <section>
+                        <h4>Unified & Intelligent Endpoints</h4>
 
-                            - Authentication
-                            - Error Handling
-                        </script>
+                        <pre><code class="hljs" data-trim style="font-size:1.7em;line-height:1.7em">
+/v1/account/1/
+/v1/account/1/location/56/
+/v1/account/1/location/56/fixture/42/
+/v1/account/1/location/56/usage/
+/v1/account/1/billing/
+                            </code></pre>
                     </section>
                 </section>
                 <section>
